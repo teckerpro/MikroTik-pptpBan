@@ -14,7 +14,6 @@
 		([:find $prevMess "TCP connection established from"] >= 0) and\
 		([:find $content "logged in,"] < 0))\
 		do={
-			#:set badIP [:pick $prevMess 32 [:len $prevMess]];
 			:set badIP [:pick $prevMess 32 [:len $prevMess]];
 			:if ([:len [/ip firewall address-list find address=$badIP and list=$listName]] <= 0)\
 			do={
