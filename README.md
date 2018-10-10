@@ -41,4 +41,4 @@ This script adds to the blacklist IPv4 addresses which:
 
 - established PPTP connection without login
 		
-		TCP connection established from ip.ip.ip.ip
+		TCP connection established from 192.0.2.0
