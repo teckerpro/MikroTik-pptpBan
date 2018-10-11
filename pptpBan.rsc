@@ -1,4 +1,4 @@
-:local bufferName "memory";
+:local bufferName "pptpBuffer";
 :local listName "Blacklist";
 :local timeout 180d;
 
@@ -24,8 +24,8 @@
 
 			:if ([:len [/ip firewall address-list find address=$badIP and list=$listName]] <= 0)\
 			do={
-				/ip firewall address-list add list=$listName address=$badIP timeout=$timeout comment="by pptpBan (pptp)$user";
-				:log warning "ip $badIP has been banned (pptp)$user";
+				/ip firewall address-list add list=$listName address=$badIP timeout=$timeout comment="by pptpBan (pptp) $user";
+				:log warning "ip $badIP has been banned (pptp) $user";
 				}
 			}
 			:if ($notFirstRunCheck = false) do={ :set notFirstRunCheck true; }
